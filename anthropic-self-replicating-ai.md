@@ -123,6 +123,17 @@ sources:
 
 **導讀者按**：到發表當天為止，本文沒有找到獨立團隊的重現或具名的外部評論。
 
+## 2026 年的其他 IoT 事件
+
+Anthropic 的假設建立在一個前提：世界上有大量連網、少有人維護的設備。2026 年已公開的幾件事，可以當這個前提的參照。它們都是傳統的腳本式殭屍網路或法規動態，沒有一件涉及 AI 自主複製。
+
+- **預裝惡意軟體的電視盒。** Krebs on Security 在 2026 年 1 月 26 日報導，Kimwolf 的操作者貼出截圖，顯示他們似乎已入侵 BadBox 2.0 的控制面板。BadBox 2.0 是一個以中國為基地的殭屍網路，惡意軟體預裝在許多安卓電視盒裡；Krebs 寫到 FBI 與 Google 都說正在追查其幕後操作者。對 Anthropic 文中的假設來說，這代表有些裝置在使用者拿到手之前，就已被植入程式。
+- **DDoS 紀錄。** 2026 年 1 月底，Cloudflare 披露一次 31.4 Tbps 的攻擊，是公開報導中的最大紀錄，由 Aisuru／Kimwolf 發動，來源主要是被入侵的 IoT 裝置與未經官方認證的安卓電視裝置。FastNetMon 與 Security Affairs 的轉述一致，但對攻擊實際發生的時間說法不同（Security Affairs 標題寫 2025 年 11 月）。
+- **停產路由器被鎖定。** 香港電腦保安事故協調中心（HKCERT）在 2026 年 4 月 23 日發布公告：新的 Mirai 變種利用 CVE-2025-29635，攻擊已停產、不再有支援的 D-Link DIR-823X 路由器，並提到 TP-Link、ZTE 等停產路由器也被鎖定；建議替換停產設備、關閉不必要的遠端管理。
+- **歐盟開始要求通報。** 《網路韌性法》（CRA）的漏洞與事件通報義務，自 2026 年 9 月 11 日起適用於含數位元件的產品，包括已上市的產品：製造商知悉後 24 小時內預警、72 小時內通報。（依 Travers Smith 與 Jones Day 兩家律所的說明，屬二手整理。）這對應 Anthropic 文中「製造商端」的防守建議。
+
+**導讀者按**：這四件事與本研究的共同點，是同一批弱點：預設設定、預裝程式、停止維護。差別在於它們目前都不需要 AI，既有手法就足以大規模感染。Anthropic 的論點是 AI 把這些既有弱點變成可以被更少人力、更多種硬體利用，這是外推，上面的事件並不能直接證明。
+
 ## 放到台灣看
 
 這篇文章談的是全球性的 IoT 風險，沒有提到台灣。能放到台灣的，是兩件可以查證的事。
@@ -167,6 +178,12 @@ sources:
 - Antonakakis 等，[Cleaning Up the Internet of Evil Things](https://www.ndss-symposium.org/ndss-paper/cleaning-up-the-internet-of-evil-things-real-world-evidence-on-isp-and-consumer-efforts-to-remove-mirai/)，NDSS
 - 英國 NCSC，[Smart devices law](https://www.ncsc.gov.uk/blog-post/smart-devices-law)
 - Epoch AI，[Epoch Capabilities Index](https://epoch.ai/eci)
+- Krebs on Security，[Who Operates the Badbox 2.0 Botnet?](https://krebsonsecurity.com/?p=73071)，2026-01-26
+- FastNetMon，[Aisuru botnet sets a new DDoS record at 31.4 Tbps](https://fastnetmon.com/2026/02/01/aisuru-botnet-sets-a-new-ddos-record-at-31-4-tbps/)，2026-02-01（二手）
+- Security Affairs，[Record-breaking 31.4 Tbps DDoS attack hits in November 2025, stopped by Cloudflare](https://securityaffairs.com/187690/hacking/record-breaking-31-4-tbps-ddos-attack-hits-in-november-2025-stopped-by-cloudflare.html)（二手）
+- HKCERT，[Botnet Alert - Mirai Botnet Targets End-of-Life D-Link Routers](https://www.hkcert.org/security-bulletin/botnet-alert-mirai-botnet-targets-end-of-life-d-link-routers_20260423)，2026-04-23
+- Travers Smith，[The EU Cyber Resilience Act's vulnerability and incident reporting requirements are now live](https://www.traverssmith.com/knowledge/knowledge-container/the-eu-cyber-resilience-acts-vulnerability-and-incident-reporting-requirements-are-now-live/)，2026-09-11（二手）
+- Jones Day，[EU Cyber Resilience Act 24-hour reporting duties start September 11, 2026](https://www.jonesday.com/en/insights/2026/07/eu-cyber-resilience-act-24hour-reporting-duties-start-september-11-2026)，2026-07（二手）
 - iThome，[已終止支援的GeoVision視訊監控設備存在重大漏洞，傳出被用於攻擊行動](https://www.ithome.com.tw/news/166063)，2024-11-18
 - iThome，[GeoVision物聯網裝置遭到鎖定，殭屍網路利用已知漏洞滲透](https://www.ithome.com.tw/news/168841)，2025-05-08
 - Unite.AI，[Anthropic Red Team Says Small AI Models May Soon Replicate on IoT Devices](https://www.unite.ai/anthropic-red-team-says-small-ai-models-may-soon-replicate-on-iot-devices/)，2026-10-12（二手；頁面署名為 AI agent）
